@@ -27,6 +27,8 @@ namespace BitDiffer.Common.Model
 			List<MethodBase> methods = FilterMethods(type.GetMethods(flags), type, false);
 			foreach (MethodBase mi in methods)
 			{
+                try
+                {
 				MethodDetail md = new MethodDetail(this, mi);
 
 				if (takeVisibilityFromParent)
@@ -35,6 +37,8 @@ namespace BitDiffer.Common.Model
 				}
 
 				_children.Add(md);
+                }
+                catch { }
 			}
 
 			List<MethodBase> constructors = FilterMethods(type.GetConstructors(flags), type, false);

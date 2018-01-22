@@ -95,8 +95,13 @@ namespace BitDiffer.Core
             {
                 List<ICanAlign> entry = new List<ICanAlign>();
 
-                entry.AddRange(AssemblyDirectoryEntry.From(dir, Directory.GetFiles(dir, "*.dll", option)));
-                entry.AddRange(AssemblyDirectoryEntry.From(dir, Directory.GetFiles(dir, "*.exe", option)));
+                //entry.AddRange(AssemblyDirectoryEntry.From(dir, Directory.GetFiles(dir, "*.dll", option)));
+                //entry.AddRange(AssemblyDirectoryEntry.From(dir, Directory.GetFiles(dir, "*.exe", option)));
+
+                entry.AddRange( AssemblyDirectoryEntry.From( dir, Directory.GetFiles( dir, "Rock.dll", option ) ) );
+                entry.AddRange( AssemblyDirectoryEntry.From( dir, Directory.GetFiles( dir, "Rock.*.dll", option ) ) );
+                entry.AddRange( AssemblyDirectoryEntry.From( dir, Directory.GetFiles( dir, "DotLiquid.dll", option ) ) );
+                entry.AddRange( AssemblyDirectoryEntry.From( dir, Directory.GetFiles( dir, "SignNowSDK.dll", option ) ) );
 
                 totalFiles += entry.Count;
                 allEntries.Add(entry);
