@@ -56,6 +56,7 @@ namespace BitDiffer.Extractor
 		    }
             catch (Exception ex)
             {
+				Log.Error( $"{ex.GetType().Name} error loading assembly file {assemblyFile}");
                 var errMessage = ex.GetNestedExceptionMessage();
                 Log.Error(errMessage);
                 throw new Exception(errMessage);

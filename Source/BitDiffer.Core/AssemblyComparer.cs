@@ -273,6 +273,7 @@ namespace BitDiffer.Core
                 Log.Error("Unable to load assembly : {0}", act.FileName);
                 act.Group.HasErrors = true;
                 act.Group.ErrorDetail = ex.GetNestedExceptionMessage();
+                Log.Error( ex.Message );
                 Log.Error(act.Group.ErrorDetail);
             }
         }
