@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ComparisonSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Mode>CompareDirectories</Mode>
+  <RecurseSubdirectories>false</RecurseSubdirectories>
+  <Items>
+    <Item>C:\Source\Repos\Rock2\RockWeb\Bin</Item>
+    <Item>C:\Source\Repos\Rock\RockWeb\Bin</Item>
+  </Items>
+  <ReferenceDirectories />
+  <Config IsolationLevel="AutoDetect" UseReflectionOnlyContext="true" TryResolveGACFirst="false" Multithread="false" ReferenceDirectories="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2" />
+  <Filter PublicTypesOnly="false" IncludePublic="true" IncludeProtected="true" IncludePrivate="true" IncludeInternal="true" ChangedItemsOnly="false" IgnoreAssemblyAttributeChanges="false" CompareMethodImplementations="true" />
+</ComparisonSet>
